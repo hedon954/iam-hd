@@ -15,7 +15,7 @@ func InitLogger(zapLogger *zap.Logger) {
 	klog.SetOutputBySeverity("INFO", &infoLogger{logger: zapLogger})
 	klog.SetOutputBySeverity("WARNING", &warnLogger{logger: zapLogger})
 	klog.SetOutputBySeverity("FATAL", &fatalogger{logger: zapLogger})
-	klog.SetOutputBySeverity("ERROR", &fatalogger{logger: zapLogger})
+	klog.SetOutputBySeverity("ERROR", &errorLogger{logger: zapLogger})
 	_ = fs.Set("skip_headers", "true")
 	_ = fs.Set("logtostderr", "false")
 }

@@ -7,6 +7,8 @@ import (
 	"log"
 	"sync"
 
+	"iam-hd/pkg/log/klog"
+
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
